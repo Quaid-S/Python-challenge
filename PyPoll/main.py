@@ -8,6 +8,7 @@ with open(file, newline='') as csv_file:
     data = list(csv_reader)
 ### Vote Count ###
     vote_count = len(data)
+    print("Election Results")
     print("=================================")
     print(f"Total Votes: {vote_count}")
     print("=================================")
@@ -39,5 +40,11 @@ with open(file, newline='') as csv_file:
     print(f"Correy Votes: {correy_percent}% {correy_votes}")   
     print(f"Li Votes: {li_percent}% {li_votes}")
     print(f"O'Tooley Votes: {otooley_percent}% {otooley_votes}")
-    print("================================")
-    
+    print("=================================")
+    print(f"Winner: Khan")
+    print("=================================")
+
+    output_path = os.path.join("../Results/election_results.txt")
+    with open(output_path, "w+", newline="") as data_file:
+        lines = ["Election Results \n", "================================= \n", f"Total Votes: {vote_count} \n", "================================= \n", f"khan Votes: {khan_percent}% {khan_votes} \n", f"Correy Votes: {correy_percent}% {correy_votes} \n", f"Li Votes: {li_percent}% {li_votes} \n", f"O'Tooley Votes: {otooley_percent}% {otooley_votes} \n", "================================= \n", f"Winner: Khan \n", "================================= \n"]
+        data_file.writelines(lines) 
