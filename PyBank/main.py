@@ -18,7 +18,15 @@ with open(file, newline='') as csv_file:
 ### Finding Total Profit ###
     total = sum(float(row[1]) for row in data)
     print(f"Total Profit/Loss: {total}")
-
-  
-
-       
+## Finding Average Change ###
+    average = []
+### Finding Max profit ###
+    max_profit = max(float(row[1]) for row in data)
+    # for row in data:
+    max_month = ""
+    #     if row[1] == max_profit:
+    #         max_month = row[0]
+    print(f"Greatest increase in profits: {max_month} {max_profit}")
+    ### Finding max loss ###
+    max_loss = min(float(row[1]) for row in data) 
+    print(f"Greatest loss in profits: {max_loss}")
