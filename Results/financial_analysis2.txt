@@ -1,6 +1,6 @@
 Financial Analysis 
 ================================= 
 Total months: 86 
-Total Profit/Loss: 38382578.0 
+Greatest increase in profits:  1170593.0Total Profit/Loss: 38382578.0 
 Greatest loss in profits: -1196225.0 
 ================================= 

@@ -14,7 +14,7 @@ with open(file, newline='') as csv_file:
     print("=================================")
     csv_reader = csv.reader(csv_file, delimiter=",")
     csv_header = next(csv_file)
-    data = list(csv_reader)
+    data = list(csv_reader)  ## mav said use dict not list
     month_count = len(data) 
     print(f"Total months: {month_count}")
 ### Finding Total Profit ###
@@ -36,8 +36,8 @@ with open(file, newline='') as csv_file:
     print("=================================")
 
 ### Writing to text file ###
-    output_path = os.path.join("../Results/financial_analysis.txt")
+    output_path = os.path.join("../Results/financial_analysis2.txt")
     with open(output_path, "w+", newline="") as data_file:
-        lines = ["Financial Analysis \n", "================================= \n", f"Total months: {month_count} \n", f"Total Profit/Loss: {total} \n", f"Greatest loss in profits: {max_loss} \n", f"================================= \n"]
+        lines = ["Financial Analysis \n", "================================= \n", f"Total months: {month_count} \n", f"Greatest increase in profits: {max_month} {max_profit}", f"Total Profit/Loss: {total} \n", f"Greatest loss in profits: {max_loss} \n", f"================================= \n"]
         data_file.writelines(lines) 
 
